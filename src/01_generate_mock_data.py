@@ -181,10 +181,10 @@ def generate_sap_expenses(df_employees: pd.DataFrame) -> None:
 
 
     terminated_anomalies = [
-        ("EMP023", "CC-300", datetime(2026, 10, 2), 1250.50, "PLN", "Hotel Marriott", "Post-termination hotel stay"),
-        ("EMP023", "CC-300", datetime(2026, 10, 12), 450.00, "EUR", "Lufthansa", "Unauthorized flight booking"),
-        ("EMP024", "CC-100", datetime(2026, 10, 10), 890.00, "PLN", "Dell Poland", "Monitor purchase after exit"),
-        ("EMP025", "CC-500", datetime(2026, 10, 18), 320.00, "USD", "Amazon Web Services", "Unclosed cloud instance"),
+        ("EMP023", "CC-300", datetime(2026, 10, 2), 1250.50, "PLN", "Hotel Marriott", "Conference hotel accommodation"),
+        ("EMP023", "CC-300", datetime(2026, 10, 12), 450.00, "EUR", "Lufthansa", "Business flight to Frankfurt"),
+        ("EMP024", "CC-100", datetime(2026, 10, 10), 890.00, "PLN", "Dell Poland", "IT hardware accessories"),
+        ("EMP025", "CC-500", datetime(2026, 10, 18), 320.00, "USD", "Amazon Web Services", "Cloud hosting subscription"),
     ]
     for emp_id, cc_id, dt, amt, curr, vend, desc in terminated_anomalies:
         rows.append([
